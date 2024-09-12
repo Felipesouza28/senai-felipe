@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de CSS Grid</title>
+  <style>
+    @media (max-width: 600px) {
+    .grid-inicio {
+      display: grid; /* Define o elemento como um grid container */
+      grid-template-columns: 1fr 1fr 1fr;/* Define três colunas de largura igual */
+      grid-gap: 10px; /* Define um espaço de 10px entre os itens */
+    }
+}
+    .grid-banner {
+        display: grid; /* Define o elemento como um grid container */
+        grid-template-columns: 1fr; /* Define três colunas de largura igual */
+        grid-gap: 10px;  /* Define um espaço de 10px entre os itens */ 
+    }
+
+    .grid-final{
+        display: grid; /* Define o elemento como um grid container */
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* Define três colunas de largura igual */
+        grid-gap: 10px;  /* Define um espaço de 10px entre os itens */
+    }
+
+    .grid-item{
+        background-color: #006b96;
+        color: white;
+        border: 1px solid #ddd;
+        padding: 20px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .footer{
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+        color: white;
+    } 
+  </style>
+</head>
+<body>
+    <div class="grid-inicio">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+      </div>
+
+      <div class="grid-banner">
+        <div class="grid-item">4</div>
+      </div>
+
+      <div class="grid-final">
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+      </div>
+
+      <div class="footer">
+        <footer>
+        <p>&copy; Todos os direitos reservados</p>
+      </footer>
+    </div>
+      
+</body>
+</html>

@@ -1,0 +1,140 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('https://static.vecteezy.com/ti/fotos-gratis/p2/10035974-textura-grunge-para-fundo-branco-escuro-fundo-com-textura-unica-abstrato-granulado-fundo-antigo-pintado-parede-foto.jpg');
+    background-size: cover;
+    color: #000000;
+}
+header{
+    background-image: url('../animaçoes/IMG/espaço.jpg');
+    padding: 50px;
+    background-size: cover;
+    text-align: center;
+}
+
+header h1{
+    color: white;
+    font-size: 3rem;
+}
+
+.text-efects h2{
+    margin: 20px;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+.effect-fill:hover{
+    background-image: linear-gradient(to right, #f2709c, #ff9472);
+    background-clip: text;
+    color: transparent;
+    -webkit-backface-clip: text;
+}
+
+.effect-scale:hover{
+    transform: scale(1.2);
+}
+
+.effect-fade-in{
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+    }
+}
+
+.effect-rotate:hover{
+    transform: rotate(40deg);
+}
+
+.effect-shadow{
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.effect-border-grow:hover{
+    border: 2px solid;
+    padding: 5px;
+}
+
+.effect-glow:hover{
+    text-shadow: 0 0 15px rgba(68, 134, 255, 0.8);
+}
+
+.effect-flot:hover{
+    transform: translateY(-10px);
+}
+
+.effect-color-shift:hover{
+    color: #4365ef;
+}
+
+.effect-blur:hover{
+    filter: blur(2px);
+}
+
+.box-effects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.box{
+    width: 200px;
+    height: 150px;
+    margin: 20px;
+    background-color: rgb(218, 149, 65);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+/* efeito de sombreamento */
+.box-shadow:hover{
+    box-shadow: 10px 10px 30px #333333;
+}
+/* efeito de zoom */
+.box-zoom:hover{
+    transform: scale(1.1);
+}
+/* efeito para alterar a cor */
+.box-hover-bg:hover{
+    background-color: #001464;
+}
+
+/* efeito de rotação */
+.box-rotate:hover{
+    transform: rotate(25deg);
+}
+
+/* efeito de bordas arrendondadas (crescem ao passar o mouse */
+.box-border-radius:hover{
+    border-radius: 50%;
+}
+
+/* efeito de transalaçao (movimento lateral) */
+.box-translate:hover{
+    transform: translateX(20px);
+}
+
+/* efeito de escala ao passar o mouse*/
+.box-scale:hover{
+    transform: scale(1.2);
+}
+
+/* efeito de inclinação*/
+.box-skew:hover{
+    transform: skew(10deg);
+}
+
+/* efeito de brilho*/
+.box-glow:hover{
+    box-shadow: 0 0 15px #004a9e;
+}
+
+/* efeito de deslizamneto*/
+.box-slide-up:hover{
+    transform: translateY(-10px);
+}
