@@ -1,0 +1,256 @@
+/* Zerar o espaçamento e difine a fonte padrão */ 
+*{
+    margin: 0; /* margem */
+    padding: 0; /* Espaçamento entre os itens e a borda */
+    box-sizing: border-box; /* Tamanho da caixa */
+    font-family: Arial, Helvetica, sans-serif; /*Difine a fonte */
+}
+
+/* Define o fundo da página */
+ body{
+    background-color: #bbb;
+    
+}
+
+/* Cabeçalho */
+ header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 50px;
+}
+
+/* Estilo do título do cabeçalho */
+header h1 {
+    font-size: 24px;
+}
+
+/* Logo no Header */
+header img{
+    width: 80px;
+}
+
+.header-menu{
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilo de menu de seleção*/
+.header menu select{
+    padding: 10px;
+    border: none;
+    background-color: #919191;
+    color: #fff;
+    cursor: pointer; /* Ponteiro "mão" */
+}
+
+/* Corrigindo a redundãncia das selects */
+.header-menu select option:first-child {
+    color: #888;
+    font-weight: bold;
+}
+
+/* Estilo do banner principal */
+.banner{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slide{
+    display: flex;
+    animation: slide 10s infinite;
+}
+
+.slide img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+@keyframes slide{
+    0% {
+        transform: translateX(0%);
+    }
+    33%{
+        transform: translateX(-100%);
+    }
+    66%{
+        transform: translateX(-155%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* Estilo do catálogo */
+ .catalog{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ; /* 3 colunas de tamanhos iguais */
+    gap: 20px; /* Espaçamento entre as grids */
+    padding: 40px 50px;
+}
+
+/* Estilo dos cards */
+.catalog-card{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* efeito do zoom */
+.catalog-card:hover{
+    transform: scale(1.05);
+}
+/* efeito da imagem do card */
+.catalog-card img{
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* titulo do catalogo */
+.catalog-card h3{
+    font-size: 35px;
+    margin: 15x 0;
+}
+
+/* Descrição do carro */
+.catalog-card p{
+    color: #555;
+    margin-bottom: 20px; /* Inseri uma margen acima, separando melhor h3 e p */
+}
+
+/* Estilo do botão */
+.catalog-card button:hover{
+    background-color: #0056b3;
+}
+.catalog-card button{
+    padding: 10px 20px;
+    background-color: #037c03;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Estilo da seção */
+.contact-form{
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 40px;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Titulo da seção do formulario */
+.contact-form h2{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/*  Estilo dos labels */
+.contact-form label{
+    display: block;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+/* Estilo dos campos de entrada/input */
+.contact-form input,
+.contact-form textarea{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+}
+/* estilo do botão */
+.contact-form button{
+    width: 50%;
+    padding: 15px 30px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease; 
+}
+
+/* estilo do botão ao passar o mouse*/
+.contact-form button:hover{
+    background-color: #0056b3;
+}
+
+/* Imagem ao lado do formulario */
+
+/* Estilização do formulario */
+.form-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px ;
+} 
+
+/* Estilo do footer */
+footer{
+    display: grid;
+    grid-auto-columns: repeat (3, 1fr);
+    background-color: #333;
+    color: #fff;
+    padding: 30px 50px;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer ul li a{
+    color: #bbb;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover{
+    color: #fff;
+}
+
+footer p{
+    grid-column: span 3;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Estilo responsivo */
+@media (max-width: 600px){
+    .catalog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 576){
+    header{
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .header-menu{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .catalog{
+        grid-template-columns: 1fr;
+    }   
+}
